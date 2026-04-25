@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SourceRadar — Fake News Detector</title>
+    <link rel="stylesheet" href="/static/fake_news.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="grid-bg"></div>
+
+    <nav>
+        <div class="logo">
+            <div class="logo-dot"></div>
+            SourceRadar
+        </div>
+        <div class="nav-links">
+            <a href="#analyzer">Analyzer</a>
+            <a href="#how">How It Works</a>
+            <a href="#stats">Stats</a>
+        </div>
+        <div class="nav-right">
+            <div class="theme-toggle" id="themeToggle" title="Toggle light/dark mode"></div>
+        </div>
+    </nav>
+
+    <section class="hero" id="analyzer">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+
+        <div class="hero-badge">
+            <div class="badge-pulse"></div>
+            ML-Powered Fact Detection
+        </div>
+
+        <h1>Detect <em>Truth</em><br>Defeat Misinformation</h1>
+
+        <p class="hero-sub">
+            Paste any article text below. Our machine learning engine uses statistical text analysis and TF-IDF
+            vectorization to identify linguistic patterns of misinformation.
+        </p>
+
+        <div class="analyzer-box">
+            <div class="input-tabs">
+                <button class="tab-btn">URL</button>
+                <button class="tab-btn active">Article Text</button>
+            </div>
+            <div class="input-area">
+                <input class="glow-input" id="textInput" placeholder="Paste the article text here..."
+                    autocomplete="off" />
+            </div>
+            <button class="analyze-btn">
+                <div class="btn-shimmer"></div>
+                Analyze Content →
+            </button>
+        </div>
+    </section>
+
+    <section class="section" id="how">
+        <div class="section-inner">
+            <div class="section-tag">Methodology</div>
+            <div class="section-title">How It Works</div>
+            <p class="section-sub">A streamlined Natural Language Processing (NLP) pipeline analyzes word frequencies
+                and patterns to flag deception.</p>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-num">01</div>
+                    <div class="step-icon">📝</div>
+                    <div class="step-card-title">Text Ingestion</div>
+                    <div class="step-card-desc">The system receives the raw article text, preparing it for analysis by
+                        stripping away basic formatting noise.</div>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">02</div>
+                    <div class="step-icon">🧮</div>
+                    <div class="step-card-title">TF-IDF Vectorization</div>
+                    <div class="step-card-desc">Words are converted into numerical data. The model evaluates term
+                        frequency across the text to find significant keywords.</div>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">03</div>
+                    <div class="step-icon">📈</div>
+                    <div class="step-card-title">Statistical Analysis</div>
+                    <div class="step-card-desc">A trained Logistic Regression model scans the vectors, matching them
+                        against known lexical patterns of fake and real news.</div>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">04</div>
+                    <div class="step-icon">📊</div>
+                    <div class="step-card-title">Confidence Score</div>
+                    <div class="step-card-desc">The algorithm outputs a final classification (Real or Fake) along with a
+                        mathematical probability score.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section" id="stats">
+        <div class="stats-inner">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-num">TF-IDF</div>
+                    <div class="stat-label">Feature Extraction</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">LogReg</div>
+                    <div class="stat-label">Model Architecture</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">Lexical</div>
+                    <div class="stat-label">Pattern Recognition</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">&lt;0.1s</div>
+                    <div class="stat-label">Lightning Fast Inference</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>© 2026 SourceRadar · Built for a more informed world</footer>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
